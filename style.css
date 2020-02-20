@@ -1,0 +1,12 @@
+table {
+    border-style: double;
+    margin: auto; 
+    margin-top: 5%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border-style: double;
+    padding: 10px;
+}
+
