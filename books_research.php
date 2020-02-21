@@ -27,7 +27,16 @@
             <label for="year">Year :</label>
             <input type="number" id="year" name="year" />
             <label for="publisher">Publisher :</label>
-            <input type="text" id="publisher" name="publisher" />
+            <select id="publisher" name="publisher">
+            <?php
+            $publisher_list = $pdo->query("SELECT name FROM publisher");
+            echo "<option value=''>--- Choose Publisher ---</option>";
+            foreach($publisher_list as $pub){
+              echo "<option value='".$pub['name']."'>".$pub["name"]."</option>";
+            }
+            
+            ?>
+            </select>
         <input type="submit" value="Search"><br/>
 
         <table>
